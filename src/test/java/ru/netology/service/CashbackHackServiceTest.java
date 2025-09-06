@@ -11,11 +11,11 @@ import static org.testng.AssertJUnit.assertEquals;
 
 class CashbackHackServiceTest {
     @Test
-    public void calcCashback() {
+    public void shouldThousandCalcCashback() {
         CashbackHackService service = new CashbackHackService();
 
-        int expected = 1000;
-        int actual = service.remain(25000);
+        int expected = 0;
+        int actual = service.remain(1000);
 
         assertEquals(actual, expected);
     }
@@ -24,8 +24,8 @@ class CashbackHackServiceTest {
     public void calcMinCashback() {
         CashbackHackService service = new CashbackHackService();
 
-        int expected = 1000;
-        int actual = service.remain(1000);
+        int expected = 900;
+        int actual = service.remain(100);
 
         assertEquals(actual, expected);
     }
